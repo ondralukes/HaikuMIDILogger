@@ -11,7 +11,8 @@ class MidiConsumer : public BMidiLocalConsumer{
 public:
 			MidiConsumer();
 private:
-	void	Data(uchar * data, size_t len, bool atomic, bigtime_t time);
+	void	NoteOn(uchar channel, uchar note, uchar velocity, bigtime_t time);
+	void	NoteOff(uchar channel, uchar note, uchar velocity, bigtime_t time);
 };
 
 

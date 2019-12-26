@@ -6,7 +6,15 @@ MidiConsumer::MidiConsumer()
 }
 
 void
-MidiConsumer::Data(uchar * data, size_t len, bool atomic, bigtime_t time)
+MidiConsumer::NoteOn(uchar channel, uchar note, uchar velocity, bigtime_t time)
 {
-	printf("Got data\n");	
+	int32 id = GetProducerID();
+	printf("[Producer %d] Note %d on on channel %d with velocity %d\n",id,note,channel,velocity);
+}
+
+void
+MidiConsumer::NoteOff(uchar channel, uchar note, uchar velocity, bigtime_t time)
+{
+	int32 id = GetProducerID();
+	printf("[Producer %d] Note %d off on channel %d with velocity %d\n",id,note,channel,velocity);
 }
