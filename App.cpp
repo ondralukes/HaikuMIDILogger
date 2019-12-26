@@ -71,7 +71,6 @@ App::HandleMIDI(BMessage * message){
 	int32 producer;
 	int32 consumer;
 	message->FindInt32("be:op",&op);
-
 	switch (op){
 		case B_MIDI_REGISTERED:
 			{
@@ -103,6 +102,7 @@ App::HandleMIDI(BMessage * message){
 			message->FindString("be:type", type);
 			message->FindString("be:name", name);
 			printf("[MIDIRoster] %s %d changed name to %s\n",type->String(),id,name->String());
+			delete name;
 			break;
 			}
 		case B_MIDI_CHANGED_LATENCY:
@@ -118,6 +118,7 @@ App::HandleMIDI(BMessage * message){
 			printf("[MIDIRoster] %s %d changed properties\n",type->String(),id);
 			break;
 	}
+	delete type;
 }
 
 void
