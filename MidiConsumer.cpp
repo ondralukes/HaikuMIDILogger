@@ -16,7 +16,7 @@ void
 MidiConsumer::NoteOff(uchar channel, uchar note, uchar velocity, bigtime_t time)
 {
 	int32 id = GetProducerID();
-	printf("%lu: [Producer %d][Channel %d / Note %d]  Note on with velocity %d\n", time, id, channel, note, velocity);
+	printf("%lu: [Producer %d][Channel %d / Note %d]  Note off with velocity %d\n", time, id, channel, note, velocity);
 }
 
 void
