@@ -58,7 +58,7 @@ void
 MidiConsumer::SystemCommon(uchar status, uchar data1, uchar data2, bigtime_t time)
 {
 	int32 id = GetProducerID();
-	printf("%lu: [Producer %d]  System change status=%d data1=%d data2=%d\n", time, id, status, data1, data2);
+	printf("%lu: [Producer %d]  System common status=%d data1=%d data2=%d\n", time, id, status, data1, data2);
 }
 
 void
