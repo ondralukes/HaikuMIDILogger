@@ -1,3 +1,7 @@
 # HaikuMIDILogger
-This app logs events from MidiRoster and from every registered MidiProducer
-![screenshot](https://i.imgur.com/UykuUmA.png)
+## About
+This app logs MIDI events from MidiRoster and from every registered MidiProducer
+## Compilation
+Compile with `make`
+## Screenshot
+![screenshot](https://i.imgur.com/0kuKdOD.png)
